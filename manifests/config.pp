@@ -13,6 +13,7 @@ class statsd::config (
   $flushInterval                     = $statsd::flushInterval,
   $percentThreshold                  = $statsd::percentThreshold,
   $flush_counts                      = $statsd::flush_counts,
+  $keyNameSanitize                   = $statsd::keyNameSanitize,
   $deleteIdleStats                   = $statsd::deleteIdleStats,
   $deleteGauges                      = $statsd::deleteGauges,
   $deleteTimers                      = $statsd::deleteTimers,
