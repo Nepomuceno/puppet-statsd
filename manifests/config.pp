@@ -59,6 +59,12 @@ class statsd::config (
   $stackdriver_sourcePrefixSeparator = $statsd::stackdriver_sourcePrefixSeparator,
   $stackdriver_sendTimerPercentiles  = $statsd::stackdriver_sendTimerPercentiles,
   $stackdriver_debug                 = $statsd::stackdriver_debug,
+  $appinsights_aiInstrumentationKey  = $statsd::appinsights_aiInstrumentationKey,
+  $appinsights_aiPrefix              = $statsd::appinsights_aiPrefix,
+  $appinsights_aiRoleName            = $statsd::appinsights_aiRoleName,
+  $appinsights_aiRoleInstance        = $statsd::appinsights_aiRoleInstance,
+  $appinsights_aiTrackStatsDMetrics  = $statsd::appinsights_aiTrackStatsDMetrics,
+
   $repeater                          = $statsd::repeater,
   $repeaterProtocol                  = $statsd::repeaterProtocol,
   $config                            = $statsd::config,

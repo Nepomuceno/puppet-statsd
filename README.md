@@ -72,6 +72,17 @@ class { 'statsd':
 }
 ```
 
+### Application Insights
+
+class { 'statsd':
+  backends                         => ['appinsights-statsd'],
+  appinsights_aiInstrumentationKey => 'Application Insights Instrumentation Key from https://portal.azure.com', 
+  appinsights_aiPrefix             => 'Filter.Prefix',
+  appinsights_aiRoleName           => 'MyFrontEnd',
+  appinsights_aiRoleInstance       => 'VM5',
+  appinsights_aiTrackStatsDMetrics => false
+}
+
 ### Repeater
 
 ```
@@ -81,6 +92,7 @@ class { 'statsd':
   repeaterProtocol => 'udp4'
 }
 ```
+
 
 ## Testing
 

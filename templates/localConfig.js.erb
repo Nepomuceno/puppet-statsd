@@ -99,6 +99,15 @@
   }
 <% end -%>
 
+<% if @backends.grep(/appinsights/).any? -%>
+, aiInstrumentationKey: "<%= @appinsights_aiInstrumentationKey %>"
+, aiPrefix: "<%= @appinsights_aiPrefix %>"
+, aiRoleName: <%= @appinsights_aiRoleName %>
+, aiRoleInstance: "<%= @appinsights_aiRoleInstance %>"
+, aiTrackStatsDMetrics: <%= @appinsights_aiTrackStatsDMetrics %>
+<% end -%>
+
+
 <% if @backends.grep(/repeater/).any? -%>
 , repeater: [<%= @repeater.map { |r| r.to_json }.join(", ") %>]
   <% if defined? @repeaterProtocol -%>

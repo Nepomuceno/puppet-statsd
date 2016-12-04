@@ -32,4 +32,14 @@ class statsd::backends {
       require => Package['statsd'],
     }
   }
+
+  # Make sure $statsd::appinsights_aiInstrumentationKey is set
+  if $backends =~ /appinsights/ {
+    exec { 'install-statsd-stackdriver-backend':
+      command => '/usr/bin/npm install --save appinsights-statsd',
+      cwd     => "${statsd::node_module_dir}/statsd",
+      unless  => "/usr/bin/test -d ${node_base}/appinsights-statsd",
+      require => Package['statsd'],
+    }
+  }
 }

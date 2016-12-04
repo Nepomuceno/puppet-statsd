@@ -77,6 +77,12 @@ class statsd::params {
   $stackdriver_sendTimerPercentiles  = false
   $stackdriver_debug                 = false
 
+  $appinsights_aiInstrumentationKey  = undef
+  $appinsights_aiPrefix              = undef
+  $appinsights_aiRoleName            = undef
+  $appinsights_aiRoleInstance        = undef
+  $appinsights_aiTrackStatsDMetrics  = false
+
   $repeater                          = undef
   $repeaterProtocol                  = undef
 
